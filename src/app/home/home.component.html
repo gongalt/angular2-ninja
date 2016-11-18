@@ -3,3 +3,29 @@
   zxczczc
 </p>
 <ng-content></ng-content>
+
+<p>
+	{{homeTitle}}
+</p>
+
+
+<!-- Property Binding. -->
+<input [value]="myString">
+<input [attr.required]="myBoolean">
+
+<button (click)="alertMe('tempo')">zxczc</button>
+<p>
+	<label>Name:</label>
+	<input [(ngModel)]="ninja.name">
+</p>
+<p>
+	<label>Belt:</label>
+	<input [(ngModel)]="ninja.belt">
+</p>
+
+<p>{{ ninja.name }}</p>
+<p>{{ ninja.belt }}</p>
+
+
+
+<button (click)="fireYellEvent($event)">Hit Me</button>
