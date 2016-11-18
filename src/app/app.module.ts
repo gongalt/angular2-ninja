@@ -9,12 +9,14 @@ import { DirectoryComponent } from './directory/directory.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

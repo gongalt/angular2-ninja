@@ -1,8 +1,19 @@
 <header>
 	<h1>{{ title }}</h1>
+	<nav>
+		<ul>
+			<li>
+				<a [routerLink]="['/']">Home</a>
+			</li>
+			<li>
+				<a [routerLink]="['/directory']">Directory</a>
+			</li>
+		</ul>
+	</nav>
+	
 </header>
 
-<section id = "mainSection"> 
+<section id = "main"> 
 	<!-- <app-home [appComponentNinjas] = "customNinja" (onYell) = "yell($event)">svcjvksdndf;ksnfkslgnslk</app-home> -->
 	<router-outlet></router-outlet>
 </section>
