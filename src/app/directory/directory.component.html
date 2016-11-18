@@ -5,15 +5,19 @@
 <p *ngIf="test">testcvxcvx</p>
 
 <h2>Ninja's Listing</h2>
-<ul id="ninja-listing">
-	<li *ngFor="let item of list">
-		<div class = "single-ninja">
-			<span [ngStyle]="{background:item.belt}">{{item.belt}} belt</span>
-			<h3>{{ item.name | uppercase | slice:1:3 }}</h3>
-			<div (click) = "remove($event)" [attr.data-name]="item.name">delete</div>
-		</div>
-	</li>
-</ul>
+<form id="filter">
+	<label>Filter Ninja's by name:</label>
+	<input type="text" [(ngModel)]="term" name="term"/>
+</form>
+	<ul id="ninja-listing">
+		<li *ngFor="let item of list | gongFilter:term">
+			<div class = "single-ninja">
+				<span [ngStyle]="{background:item.belt}">{{item.belt}} belt</span>
+				<h3>{{ item.name }}</h3>
+				<div (click) = "remove($event)" [attr.data-name]="item.name">delete</div>
+			</div>
+		</li>
+	</ul>	
 
 <style type="text/css">
 	.blue{
