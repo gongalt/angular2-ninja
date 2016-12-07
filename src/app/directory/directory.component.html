@@ -18,6 +18,13 @@
 			</div>
 		</li>
 	</ul>	
+	
+	<button (click) = "logIt()">Log Me</button>
+	<form id = "add-ninja">
+		<input type="text" [(ngModel)]="name" name="name">
+		<input type="text" [(ngModel)]="belt" name="belt">
+		<button (click)="fbPostData(name,belt)">Add Ninja</button>
+	</form>
 
 <style type="text/css">
 	.blue{

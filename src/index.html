@@ -10,6 +10,19 @@
   <link rel="stylesheet" type="text/css" href="./assets/styles.css">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+  	<app-root>Loading...</app-root>
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyA40RJee2MFrohfXhP675oii_BQvGAG9LY",
+	    authDomain: "gongalt-angular2.firebaseapp.com",
+	    databaseURL: "https://gongalt-angular2.firebaseio.com",
+	    storageBucket: "gongalt-angular2.appspot.com",
+	    messagingSenderId: "319202707738"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 </body>
 </html>
